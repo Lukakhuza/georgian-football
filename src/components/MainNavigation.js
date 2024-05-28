@@ -6,15 +6,11 @@ function MainNavigation() {
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="euro2024">Euro 2024</Link>
-          </li>
-          <li>
-            <Link to="worldcup2026">World Cup 2026</Link>
-          </li>
+          <Link to="/">Home</Link>
+
+          <Link to="euro2024">Euro 2024</Link>
+
+          <Link to="worldcup2026">World Cup 2026</Link>
         </ul>
       </nav>
     </header>
