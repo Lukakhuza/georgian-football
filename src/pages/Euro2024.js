@@ -9,7 +9,7 @@ export default function Euro2024() {
         Football Team.
       </p>
       <p>
-        Go to the <Link to="/worldcup">world cup page.</Link>
+        Go to the <Link to="/worldcup2026">world cup page.</Link>
       </p>
     </>
   );
