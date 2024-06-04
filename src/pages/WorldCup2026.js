@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function WorldCup2026() {
   return (
     <div className="App-header">
