@@ -11,6 +11,8 @@ function MainNavigation() {
           <Link to="euro2024">Euro 2024</Link>
 
           <Link to="worldcup2026">World Cup 2026</Link>
+
+          <Link to="stadiums">Stadiums</Link>
         </ul>
       </nav>
     </header>

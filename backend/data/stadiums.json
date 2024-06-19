@@ -1,0 +1,38 @@
+[
+  {
+    "id": "s1",
+    "name": "Dinamo Arena",
+    "image": {
+      "src": "one",
+      "alt": "A picture of Dinamo Arena."
+    },
+    "city": "Tbilisi"
+  },
+  {
+    "id": "s2",
+    "name": "Mikheil Meskhi Stadium",
+    "image": {
+      "src": "meskhi.jpeg",
+      "alt": "A picture of Mikheil Meskhi Stadium."
+    },
+    "city": "Tbilisi"
+  },
+  {
+    "id": "s3",
+    "name": "Shengelia Stadium",
+    "image": {
+      "src": "three",
+      "alt": "A picture of Shengelia Stadium."
+    },
+    "city": "Kutaisi"
+  },
+  {
+    "id": "s4",
+    "name": "Batumi Arena",
+    "image": {
+      "src": "four",
+      "alt": "A picture of Batumi Arena."
+    },
+    "city": "Batumi"
+  }
+]
