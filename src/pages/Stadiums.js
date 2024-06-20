@@ -21,6 +21,7 @@ export default function Stadiums() {
           <li key={stadium.id}>
             <p>{stadium.name}</p>
             <p>{stadium.city}</p>
+            <img src={`http://localhost:3001/${stadium.image.src}`} />
           </li>
         ))}
       </ul>
