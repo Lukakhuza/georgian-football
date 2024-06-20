@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/football/stadiums", async (req, res) => {
-  const fileContent = await fs.readFileSync("./data/stadiumsTest.json");
+  const fileContent = await fs.readFileSync("./data/stadiums.json");
   const stadiumData = JSON.parse(fileContent);
   res.status(200).json({ stadiums: stadiumData });
 });

@@ -10,9 +10,7 @@ export default function Stadiums() {
         return response.json();
       })
       .then((resData) => {
-        console.log(resData.stadiums);
         setStadiums(resData.stadiums);
-        console.log(stadiums);
       });
   }, []);
 
