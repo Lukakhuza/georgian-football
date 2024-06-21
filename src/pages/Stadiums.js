@@ -15,16 +15,20 @@ export default function Stadiums() {
   }, []);
 
   return (
-    <>
-      <ul>
+    <section className="stadiums-category">
+      <h1>Stadiums in Georgia</h1>
+      <ul className="stadiums">
         {stadiums.map((stadium) => (
-          <li key={stadium.id}>
-            <p>{stadium.name}</p>
-            <p>{stadium.city}</p>
-            <img src={`http://localhost:3001/${stadium.image.src}`} />
+          <li key={stadium.id} className="stadium-item">
+            {/* <div>{stadium.city}</div> */}
+            <img
+              src={`http://localhost:3001/${stadium.image.src}`}
+              alt={stadium.image.alt}
+            />
+            <h4>{stadium.name}</h4>
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 }

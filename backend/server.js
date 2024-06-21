@@ -9,7 +9,7 @@ const app = express();
 // const shopRoutes = require("./routes/shop");
 // const stadiumRoutes = require("./routes/stadiums");
 
-app.use(express.static("images1"));
+app.use(express.static("images"));
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use((req, res, next) => {
