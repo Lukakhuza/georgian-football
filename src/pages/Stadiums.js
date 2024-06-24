@@ -38,12 +38,12 @@ export default function Stadiums() {
   console.log(stadiums.length);
 
   if (error) {
-    return <Error />;
+    return <Error isFetching={isFetching} />;
   }
   return (
     <section className="stadiums-category">
       <h1>Stadiums in Georgia</h1>
-      {stadiums.length === 0 && <p>No Stadiums Available</p>}
+      {stadiums.length === 0 && <Error isFetching={isFetching} />}
 
       {stadiums.length > 0 && (
         <ul className="stadiums">

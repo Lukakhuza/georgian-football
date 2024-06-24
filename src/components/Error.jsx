@@ -1,7 +1,7 @@
-export default function Error() {
+export default function Error(isFetching) {
   return (
     <div>
-      <p>You have encountered an error!</p>
+      <p>No Data Available!</p>
     </div>
   );
 }
