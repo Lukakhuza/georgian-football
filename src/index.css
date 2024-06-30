@@ -102,3 +102,10 @@ code {
   padding: 0.15rem 0.45rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
+
+.nda-message {
+  background-color: #282c34;
+  color: white;
+  font-size: large;
+  text-align: center;
+}

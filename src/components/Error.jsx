@@ -1,7 +1,7 @@
 export default function Error(isFetching) {
   return (
     <div>
-      <p>No Data Available!</p>
+      <p className="nda-message">No Data Available!</p>
     </div>
   );
 }

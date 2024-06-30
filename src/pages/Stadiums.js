@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Error from "../components/Error";
 
 export default function Stadiums() {
   const [isFetching, setIsFetching] = useState(false);
   const [stadiums, setStadiums] = useState([]);
   const [error, setError] = useState();
+  const dialog = useRef();
+  function handleClick() {
+    dialog.current.showModal();
+  }
 
   useEffect(() => {
     async function fetchStadiums() {
@@ -41,23 +45,29 @@ export default function Stadiums() {
     return <Error isFetching={isFetching} />;
   }
   return (
-    <section className="stadiums-category">
-      <h1>Stadiums in Georgia</h1>
-      {stadiums.length === 0 && <Error isFetching={isFetching} />}
+    <>
+      <dialog ref={dialog}>
+        <p>{stadiums}</p>
+      </dialog>
+      <button onClick={handleClick}>Click Me</button>
+      <section className="stadiums-category">
+        <h1>Stadiums in Georgia</h1>
+        {stadiums.length === 0 && <Error isFetching={isFetching} />}
 
-      {stadiums.length > 0 && (
-        <ul className="stadiums">
-          {stadiums.map((stadium) => (
-            <li key={stadium.id} className="stadium-item">
-              <img
-                src={`http://localhost:3001/${stadium.image.src}`}
-                alt={stadium.image.alt}
-              />
-              <h4>{stadium.name}</h4>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+        {stadiums.length > 0 && (
+          <ul className="stadiums">
+            {stadiums.map((stadium) => (
+              <li key={stadium.id} className="stadium-item">
+                <img
+                  src={`http://localhost:3001/${stadium.image.src}`}
+                  alt={stadium.image.alt}
+                />
+                <h4>{stadium.name}</h4>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </>
   );
 }
