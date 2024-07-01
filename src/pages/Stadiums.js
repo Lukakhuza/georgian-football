@@ -39,17 +39,14 @@ export default function Stadiums() {
     //   });
   }, []);
 
-  console.log(stadiums.length);
+  console.log(dialog.current);
+  // console.log(stadiums.length);
 
   if (error) {
     return <Error isFetching={isFetching} />;
   }
   return (
     <>
-      <dialog ref={dialog}>
-        <p>{stadiums}</p>
-      </dialog>
-      <button onClick={handleClick}>Click Me</button>
       <section className="stadiums-category">
         <h1>Stadiums in Georgia</h1>
         {stadiums.length === 0 && <Error isFetching={isFetching} />}
@@ -58,6 +55,8 @@ export default function Stadiums() {
           <ul className="stadiums">
             {stadiums.map((stadium) => (
               <li key={stadium.id} className="stadium-item">
+                {/* <button onClick={handleClick}>
+                  </button> */}
                 <img
                   src={`http://localhost:3001/${stadium.image.src}`}
                   alt={stadium.image.alt}

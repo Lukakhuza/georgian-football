@@ -7,6 +7,7 @@ export default function HomePage() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Home of Georgian Football</p>
+        <p>მე ვარ საქართველო</p>
       </header>
     </div>
   );
