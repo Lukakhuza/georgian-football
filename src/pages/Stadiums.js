@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Error from "../components/Error";
+import StadiumModal from "../components/StadiumModal";
 
 export default function Stadiums() {
   const [isFetching, setIsFetching] = useState(false);
@@ -8,6 +9,7 @@ export default function Stadiums() {
   const dialog = useRef();
   function handleClick() {
     dialog.current.showModal();
+    console.log(stadiums[0].name);
   }
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function Stadiums() {
     //   });
   }, []);
 
-  console.log(dialog.current);
+  // console.log(dialog.current);
   // console.log(stadiums.length);
 
   if (error) {
@@ -47,16 +49,16 @@ export default function Stadiums() {
   }
   return (
     <>
+      <StadiumModal ref={dialog} props={stadiums} />
       <section className="stadiums-category">
         <h1>Stadiums in Georgia</h1>
+        <button onClick={handleClick}>Click Here</button>
         {stadiums.length === 0 && <Error isFetching={isFetching} />}
-
         {stadiums.length > 0 && (
           <ul className="stadiums">
             {stadiums.map((stadium) => (
               <li key={stadium.id} className="stadium-item">
-                {/* <button onClick={handleClick}>
-                  </button> */}
+                {/* <button onClick={handleClick}></button> */}
                 <img
                   src={`http://localhost:3001/${stadium.image.src}`}
                   alt={stadium.image.alt}
