@@ -1,16 +1,12 @@
+import StadiumDetails from "./StadiumDetails";
 import { forwardRef } from "react";
 
-const StadiumsModal = forwardRef(function StadiumModal(props, ref) {
-  console.log(props.props[1].name);
-
+const StadiumsModal = forwardRef(function StadiumModal({ props }, ref) {
+  console.log(props.length);
   return (
     <dialog ref={ref} className="result-modal">
-      <p>You Won!</p>
-      <p>Luka</p>
-      {/* <p>{storedName}</p> */}
-      <form method="dialog">
-        <button>Close</button>
-      </form>
+      {props.length === 0 && <p>Fetching Data</p>}
+      {props.length > 0 && <StadiumDetails />}
     </dialog>
   );
 });

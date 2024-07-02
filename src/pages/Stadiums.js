@@ -31,18 +31,7 @@ export default function Stadiums() {
     }
 
     fetchStadiums();
-    // fetch()
-    //   .then((response) => {
-    //     console.log(response);
-    //     return response.json();
-    //   })
-    //   .then((resData) => {
-    //     setStadiums(resData.stadiums);
-    //   });
   }, []);
-
-  // console.log(dialog.current);
-  // console.log(stadiums.length);
 
   if (error) {
     return <Error isFetching={isFetching} />;
