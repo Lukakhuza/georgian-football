@@ -107,7 +107,7 @@ code {
   border: none;
   border-radius: 8px;
   padding: 2rem;
-  background-color: #d7fcf8;
+  background-color: #126aed;
 }
 
 .result-modal[open] {
@@ -115,7 +115,7 @@ code {
 }
 
 .result-modal::backdrop {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(200, 200, 200, 0.75);
 }
 
 .result-modal h2 {
@@ -150,12 +150,12 @@ code {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  background: #12352f;
+  background: #021221;
   color: #edfcfa;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
 .result-modal button:hover {
-  background: #051715;
+  background: rgb(88, 16, 16);
 }

@@ -26,6 +26,12 @@ app.get("/football/stadiums", async (req, res) => {
   res.status(200).json({ stadiums: stadiumData });
 });
 
+app.get("/football/squad", async (req, res) => {
+  const fileContent = await fs.readFileSync("./data/squad.json");
+  const squadData = JSON.parse(fileContent);
+  res.status(200).json({ squad: squadData });
+});
+
 // app.use(express.static(path.join(__dirname, "public")));
 
 // app.use("/admin", adminRoutes);

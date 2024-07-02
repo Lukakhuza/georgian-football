@@ -1,0 +1,262 @@
+[
+  {
+    "id": "0",
+    "number": "25",
+    "first-name": "Giorgi",
+    "last-name": "Mamardashvili",
+    "pos": "gk",
+    "dob": "09292000",
+    "team": "Valencia CF",
+    "goals": "0"
+  },
+  {
+    "id": "1",
+    "number": "12",
+    "first-name": "Luka",
+    "last-name": "Gugeshashvili",
+    "pos": "gk",
+    "dob": "04291999",
+    "team": "FC Qarabag",
+    "goals": "0"
+  },
+  {
+    "id": "2",
+    "number": "1",
+    "first-name": "Giorgi",
+    "last-name": "Loria",
+    "pos": "gk",
+    "dob": "01271986",
+    "team": "Dinamo Tbilisi",
+    "goals": "0"
+  },
+  {
+    "id": "3",
+    "number": "2",
+    "first-name": "Otar",
+    "last-name": "Kakabadze",
+    "pos": "d",
+    "dob": "06271995",
+    "team": "Tenerife",
+    "goals": "0"
+  },
+  {
+    "id": "4",
+    "number": "3",
+    "first-name": "Lasha",
+    "last-name": "Dvali",
+    "pos": "d",
+    "dob": "05141995",
+    "team": "Apoel Nicosia",
+    "goals": "0"
+  },
+  {
+    "id": "5",
+    "number": "4",
+    "first-name": "Guram",
+    "last-name": "Kashia",
+    "pos": "d",
+    "dob": "07041987",
+    "team": "Slovan Bratislava",
+    "goals": "0"
+  },
+  {
+    "id": "6",
+    "number": "5",
+    "first-name": "Solomon",
+    "last-name": "Kvirkvelia",
+    "pos": "d",
+    "dob": "02061992",
+    "team": "Al Okhdood",
+    "goals": "0"
+  },
+  {
+    "id": "7",
+    "number": "13",
+    "first-name": "Giorgi",
+    "last-name": "Gocholeishvili",
+    "pos": "d",
+    "dob": "02142001",
+    "team": "Shakhtar Donetsk",
+    "goals": "0"
+  },
+  {
+    "id": "8",
+    "number": "14",
+    "first-name": "Luka",
+    "last-name": "Lochoshvili",
+    "pos": "d",
+    "dob": "05291998",
+    "team": "Cremonese",
+    "goals": "0"
+  },
+  {
+    "id": "9",
+    "number": "15",
+    "first-name": "Giorgi",
+    "last-name": "Gvelesiani",
+    "pos": "d",
+    "dob": "05051991",
+    "team": "Persepolis",
+    "goals": "0"
+  },
+  {
+    "id": "10",
+    "number": "24",
+    "first-name": "Jemal",
+    "last-name": "Tabidze",
+    "pos": "d",
+    "dob": "03181996",
+    "team": "Panetolikos",
+    "goals": "0"
+  },
+  {
+    "id": "11",
+    "number": "6",
+    "first-name": "Giorgi",
+    "last-name": "Kochorashvili",
+    "pos": "m",
+    "dob": "06291999",
+    "team": "Levante",
+    "goals": "0"
+  },
+  {
+    "id": "12",
+    "number": "10",
+    "first-name": "Giorgi",
+    "last-name": "Chakvetadze",
+    "pos": "m",
+    "dob": "08291999",
+    "team": "Watford",
+    "goals": "0"
+  },
+  {
+    "id": "13",
+    "number": "16",
+    "first-name": "Nika",
+    "last-name": "Kvekveskiri",
+    "pos": "m",
+    "dob": "",
+    "team": "",
+    "goals": "0"
+  },
+  {
+    "id": "14",
+    "number": "17",
+    "first-name": "Otar",
+    "last-name": "Kiteishvili",
+    "pos": "m",
+    "dob": "SK Sturm Graz",
+    "team": "03261996",
+    "goals": "0"
+  },
+  {
+    "id": "15",
+    "number": "18",
+    "first-name": "Sandro",
+    "last-name": "Altunashvili",
+    "pos": "m",
+    "dob": "05191997",
+    "team": "Wolfsberger",
+    "goals": "0"
+  },
+  {
+    "id": "16",
+    "number": "20",
+    "first-name": "Anzor",
+    "last-name": "Mekvabishvili",
+    "pos": "m",
+    "dob": "06052001",
+    "team": "Universitatea Craiova",
+    "goals": "0"
+  },
+  {
+    "id": "17",
+    "number": "21",
+    "first-name": "Giorgi",
+    "last-name": "Tsitaishvili",
+    "pos": "m",
+    "dob": "11182000",
+    "team": "Dinamo Batumi",
+    "goals": "0"
+  },
+  {
+    "id": "18",
+    "number": "23",
+    "first-name": "Saba",
+    "last-name": "Lobjanidze",
+    "pos": "m",
+    "dob": "12181994",
+    "team": "Atlanta United FC",
+    "goals": "0"
+  },
+  {
+    "id": "19",
+    "number": "26",
+    "first-name": "Gabriel",
+    "last-name": "Sigua",
+    "pos": "m",
+    "dob": "06302005",
+    "team": "FC Basel",
+    "goals": "0"
+  },
+  {
+    "id": "20",
+    "number": "7",
+    "first-name": "Khvicha",
+    "last-name": "Kvaratskhelia",
+    "pos": "f",
+    "dob": "02122001",
+    "team": "Napoli",
+    "goals": "0"
+  },
+  {
+    "id": "21",
+    "number": "8",
+    "first-name": "Budu",
+    "last-name": "Zivzivadze",
+    "pos": "f",
+    "dob": "03101994",
+    "team": "Karlsruher SC",
+    "goals": "0"
+  },
+  {
+    "id": "22",
+    "number": "9",
+    "first-name": "Zuriko",
+    "last-name": "Davitashvili",
+    "pos": "f",
+    "dob": "02152001",
+    "team": "Bordeaux",
+    "goals": "0"
+  },
+  {
+    "id": "23",
+    "number": "11",
+    "first-name": "Giorgi",
+    "last-name": "Kvilitaia",
+    "pos": "f",
+    "dob": "10011993",
+    "team": "Apoel Nicosia",
+    "goals": "0"
+  },
+  {
+    "id": "24",
+    "number": "19",
+    "first-name": "Levan",
+    "last-name": "Shengelia",
+    "pos": "f",
+    "dob": "10271995",
+    "team": "Panetolikos",
+    "goals": "0"
+  },
+  {
+    "id": "25",
+    "number": "22",
+    "first-name": "Georges",
+    "last-name": "Mikautadze",
+    "pos": "f",
+    "dob": "10312000",
+    "team": "Metz",
+    "goals": "0"
+  }
+]

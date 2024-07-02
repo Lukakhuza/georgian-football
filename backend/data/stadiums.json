@@ -1,6 +1,6 @@
 [
   {
-    "id": "s1",
+    "id": "0",
     "name": "Dinamo Arena",
     "image": {
       "src": "dinamo-arena.png",
@@ -13,7 +13,7 @@
     "latitude": "44.7898E"
   },
   {
-    "id": "s2",
+    "id": "1",
     "name": "Meskhi Stadium",
     "image": {
       "src": "meskhi.jpeg",
@@ -26,7 +26,7 @@
     "latitude": "44.7462E"
   },
   {
-    "id": "s3",
+    "id": "2",
     "name": "Shengelia Stadium",
     "image": {
       "src": "shengelia-stadium.jpeg",
@@ -39,7 +39,7 @@
     "latitude": "42.6833E"
   },
   {
-    "id": "s4",
+    "id": "3",
     "name": "Batumi Arena",
     "image": {
       "src": "batumi-arena.png",

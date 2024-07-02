@@ -6,10 +6,14 @@ export default function Stadiums() {
   const [isFetching, setIsFetching] = useState(false);
   const [stadiums, setStadiums] = useState([]);
   const [error, setError] = useState();
+  const [selectedStadiumId, setSelectedStadiumId] = useState(null);
   const dialog = useRef();
-  function handleClick() {
+
+  function handleClick(id) {
+    setSelectedStadiumId(stadiums[id]);
     dialog.current.showModal();
-    console.log(stadiums[0].name);
+    // console.log(selectedStadium);
+    // console.log(id);
   }
 
   useEffect(() => {
@@ -38,21 +42,26 @@ export default function Stadiums() {
   }
   return (
     <>
-      <StadiumModal ref={dialog} props={stadiums} />
+      <StadiumModal
+        ref={dialog}
+        props={(stadiums, selectedStadiumId)}
+        // selectedStadium={selectedStadium}
+      />
       <section className="stadiums-category">
         <h1>Stadiums in Georgia</h1>
-        <button onClick={handleClick}>Click Here</button>
         {stadiums.length === 0 && <Error isFetching={isFetching} />}
         {stadiums.length > 0 && (
           <ul className="stadiums">
             {stadiums.map((stadium) => (
               <li key={stadium.id} className="stadium-item">
-                {/* <button onClick={handleClick}></button> */}
-                <img
-                  src={`http://localhost:3001/${stadium.image.src}`}
-                  alt={stadium.image.alt}
-                />
-                <h4>{stadium.name}</h4>
+                <button onClick={() => handleClick(stadium.id)}>
+                  {/* <button onClick={handleClick}></button> */}
+                  <img
+                    src={`http://localhost:3001/${stadium.image.src}`}
+                    alt={stadium.image.alt}
+                  />
+                  <h4>{stadium.name}</h4>
+                </button>
               </li>
             ))}
           </ul>
