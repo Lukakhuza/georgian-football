@@ -24,9 +24,10 @@ code {
 .stadiums-category {
   max-width: 60rem;
   /* max-height: 100%; */
-  background-color: #2d3d5e;
-  /* border: 1px solid; */
-  border-color: darkslateblue;
+  background-color: #282c34;
+
+  border: 1px solid;
+  border-color: darkred;
   /* align-self: center; */
   margin: 0 auto;
   margin-top: 0;
