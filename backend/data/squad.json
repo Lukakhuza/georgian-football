@@ -207,7 +207,7 @@
     "pos": "f",
     "dob": "02122001",
     "team": "Napoli",
-    "goals": "0"
+    "goals": "16"
   },
   {
     "id": "21",
@@ -217,7 +217,7 @@
     "pos": "f",
     "dob": "03101994",
     "team": "Karlsruher SC",
-    "goals": "0"
+    "goals": "8"
   },
   {
     "id": "22",
@@ -227,7 +227,7 @@
     "pos": "f",
     "dob": "02152001",
     "team": "Bordeaux",
-    "goals": "0"
+    "goals": "6"
   },
   {
     "id": "23",
@@ -257,6 +257,6 @@
     "pos": "f",
     "dob": "10312000",
     "team": "Metz",
-    "goals": "0"
+    "goals": "13"
   }
 ]
