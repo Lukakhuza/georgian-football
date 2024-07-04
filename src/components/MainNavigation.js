@@ -1,20 +1,50 @@
-import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
+import NavigationTab from "./NavigationTab";
+import { useState } from "react";
+// import { Children } from "react";
 
 function MainNavigation() {
+  const [selectedTab, setSelectedTab] = useState("home");
+
+  function handleSelect(tab) {
+    setSelectedTab(tab);
+  }
+
   return (
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
-          <Link to="/">Home</Link>
+          <NavigationTab
+            to="/"
+            onSelectTab={() => handleSelect("home")}
+            selectedTab={selectedTab === "home"}
+          >
+            Home
+          </NavigationTab>
 
-          <Link to="/squad">Squad</Link>
+          <NavigationTab
+            to="/squad"
+            onSelectTab={() => handleSelect("squad")}
+            selectedTab={selectedTab === "squad"}
+          >
+            Squad
+          </NavigationTab>
 
-          <Link to="euro2024">Euro 2024</Link>
+          <NavigationTab
+            to="euro2024"
+            onSelectTab={() => handleSelect("euro2024")}
+            selectedTab={selectedTab === "euro2024"}
+          >
+            Euro 2024
+          </NavigationTab>
 
-          {/* <Link to="worldcup2026">World Cup 2026</Link> */}
-
-          <Link to="stadiums">Stadiums</Link>
+          <NavigationTab
+            to="stadiums"
+            onSelectTab={() => handleSelect("stadiums")}
+            selectedTab={selectedTab === "stadiums"}
+          >
+            Stadiums
+          </NavigationTab>
         </ul>
       </nav>
     </header>
