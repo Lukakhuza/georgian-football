@@ -48,7 +48,7 @@ export default function Stadiums() {
         // selectedStadium={selectedStadium}
       />
       <section className="stadiums-category">
-        <h1>Stadiums in Georgia</h1>
+        <h1 style={{ color: "white" }}>Stadiums in Georgia</h1>
         {stadiums.length === 0 && <Error isFetching={isFetching} />}
         {stadiums.length > 0 && (
           <ul className="stadiums">
