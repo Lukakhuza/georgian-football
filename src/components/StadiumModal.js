@@ -9,7 +9,7 @@ const StadiumsModal = forwardRef(function StadiumModal({ props }, ref) {
   return (
     <motion.dialog
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 0.5, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       ref={ref}
       className="result-modal"
