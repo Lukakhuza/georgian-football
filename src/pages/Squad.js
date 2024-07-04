@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
-// import Stack from "react-bootstrap/Stack";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Stack from "react-bootstrap/Stack";
 
 export default function Squad() {
-  const [isFetching, setIsFetching] = useState(false);
+  // const [isFetching, setIsFetching] = useState(false);
   const [squad, setSquad] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
     async function fetchPlayers() {
-      setIsFetching(true);
+      // setIsFetching(true);
       try {
         const response = await fetch("http://localhost:3001/football/squad");
         const resData = await response.json();
@@ -20,7 +18,7 @@ export default function Squad() {
       } catch (error) {
         setError(error);
       }
-      setIsFetching(false);
+      // setIsFetching(false);
     }
     fetchPlayers();
   }, []);

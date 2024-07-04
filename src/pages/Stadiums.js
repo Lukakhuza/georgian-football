@@ -42,11 +42,7 @@ export default function Stadiums() {
   }
   return (
     <>
-      <StadiumModal
-        ref={dialog}
-        props={(stadiums, selectedStadiumId)}
-        // selectedStadium={selectedStadium}
-      />
+      <StadiumModal ref={dialog} props={(stadiums, selectedStadiumId)} />
       <section className="stadiums-category">
         <h1 style={{ color: "white" }}>Stadiums in Georgia</h1>
         {stadiums.length === 0 && <Error isFetching={isFetching} />}
@@ -55,7 +51,6 @@ export default function Stadiums() {
             {stadiums.map((stadium) => (
               <li key={stadium.id} className="stadium-item">
                 <button onClick={() => handleClick(stadium.id)}>
-                  {/* <button onClick={handleClick}></button> */}
                   <img
                     src={`http://localhost:3001/${stadium.image.src}`}
                     alt={stadium.image.alt}
