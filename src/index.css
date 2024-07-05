@@ -161,3 +161,11 @@ code {
 .result-modal button:hover {
   background: rgb(88, 16, 16);
 }
+
+.playwrite-gb-s-400 {
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: white;
+  /* font-style: ; */
+}

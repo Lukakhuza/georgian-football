@@ -7,6 +7,10 @@
     "pos": "gk",
     "dob": "09292000",
     "team": "Valencia CF",
+    "image": {
+      "src": "giorgi-mamardashvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -17,6 +21,10 @@
     "pos": "gk",
     "dob": "04291999",
     "team": "FC Qarabag",
+    "image": {
+      "src": "luka-gugeshashvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -27,6 +35,10 @@
     "pos": "gk",
     "dob": "01271986",
     "team": "Dinamo Tbilisi",
+    "image": {
+      "src": "giorgi-loria.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -37,6 +49,10 @@
     "pos": "d",
     "dob": "06271995",
     "team": "Tenerife",
+    "image": {
+      "src": "otar-kakabadze.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -47,6 +63,10 @@
     "pos": "d",
     "dob": "05141995",
     "team": "Apoel Nicosia",
+    "image": {
+      "src": "lasha-dvali.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -57,6 +77,10 @@
     "pos": "d",
     "dob": "07041987",
     "team": "Slovan Bratislava",
+    "image": {
+      "src": "guram-kashia.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -67,6 +91,10 @@
     "pos": "d",
     "dob": "02061992",
     "team": "Al Okhdood",
+    "image": {
+      "src": "solomon-kverkvelia.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -77,6 +105,10 @@
     "pos": "d",
     "dob": "02142001",
     "team": "Shakhtar Donetsk",
+    "image": {
+      "src": "gocholeishvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -87,6 +119,10 @@
     "pos": "d",
     "dob": "05291998",
     "team": "Cremonese",
+    "image": {
+      "src": "luka-lochoshvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -97,6 +133,10 @@
     "pos": "d",
     "dob": "05051991",
     "team": "Persepolis",
+    "image": {
+      "src": "giorgi-gvelesiani.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -107,6 +147,10 @@
     "pos": "d",
     "dob": "03181996",
     "team": "Panetolikos",
+    "image": {
+      "src": "jimi-tabidze.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -117,6 +161,10 @@
     "pos": "m",
     "dob": "06291999",
     "team": "Levante",
+    "image": {
+      "src": "giorgi-kochorashvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -127,6 +175,10 @@
     "pos": "m",
     "dob": "08291999",
     "team": "Watford",
+    "image": {
+      "src": "giorgi-chakvetadze.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -137,6 +189,10 @@
     "pos": "m",
     "dob": "",
     "team": "",
+    "image": {
+      "src": "nika-kvekveskiri.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -147,6 +203,10 @@
     "pos": "m",
     "dob": "SK Sturm Graz",
     "team": "03261996",
+    "image": {
+      "src": "otar-kiteishvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -157,6 +217,10 @@
     "pos": "m",
     "dob": "05191997",
     "team": "Wolfsberger",
+    "image": {
+      "src": "sandro-altunashvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -167,6 +231,10 @@
     "pos": "m",
     "dob": "06052001",
     "team": "Universitatea Craiova",
+    "image": {
+      "src": "anri-mekvabishvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -177,6 +245,10 @@
     "pos": "m",
     "dob": "11182000",
     "team": "Dinamo Batumi",
+    "image": {
+      "src": "giorgi-tsitaishvili.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -187,6 +259,10 @@
     "pos": "m",
     "dob": "12181994",
     "team": "Atlanta United FC",
+    "image": {
+      "src": "saba-lobjanidze.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -197,6 +273,10 @@
     "pos": "m",
     "dob": "06302005",
     "team": "FC Basel",
+    "image": {
+      "src": "sigua.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -207,6 +287,10 @@
     "pos": "f",
     "dob": "02122001",
     "team": "Napoli",
+    "image": {
+      "src": "khvicha-kvaratskhelia.png",
+      "alt": ""
+    },
     "goals": "16"
   },
   {
@@ -217,6 +301,10 @@
     "pos": "f",
     "dob": "03101994",
     "team": "Karlsruher SC",
+    "image": {
+      "src": "budu-zivzivadze.png",
+      "alt": ""
+    },
     "goals": "8"
   },
   {
@@ -227,6 +315,10 @@
     "pos": "f",
     "dob": "02152001",
     "team": "Bordeaux",
+    "image": {
+      "src": "zuka-davitashvili.png",
+      "alt": ""
+    },
     "goals": "6"
   },
   {
@@ -237,6 +329,10 @@
     "pos": "f",
     "dob": "10011993",
     "team": "Apoel Nicosia",
+    "image": {
+      "src": "giorgi-kvilitaia.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -247,6 +343,10 @@
     "pos": "f",
     "dob": "10271995",
     "team": "Panetolikos",
+    "image": {
+      "src": "levan-shengelia.png",
+      "alt": ""
+    },
     "goals": "0"
   },
   {
@@ -257,6 +357,10 @@
     "pos": "f",
     "dob": "10312000",
     "team": "Metz",
+    "image": {
+      "src": "georges-mikautadze.png",
+      "alt": ""
+    },
     "goals": "13"
   }
 ]

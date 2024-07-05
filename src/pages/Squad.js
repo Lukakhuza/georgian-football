@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function Squad() {
   // const [isFetching, setIsFetching] = useState(false);
@@ -34,32 +32,38 @@ export default function Squad() {
 
   return (
     <>
-      <section>
+      <Container>
         {squad.length === 0 && squad.length}
         {squad.length > 0 && (
-          <ul>
+          <Row className="justify-content-evenly">
             {squad.map((player) => (
-              <li key={player.id}>
-                {player["first-name"] + " " + player["last-name"]}
-              </li>
+              <Col
+                style={{
+                  border: "solid",
+                  borderColor: "white",
+                  borderRadius: "1rem",
+                  backgroundColor: "rgb(200,84,84)",
+                }}
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                key={player.id}
+              >
+                <p
+                  className="playwrite-gb-s-400"
+                  style={{ justifyItems: "center" }}
+                >
+                  {player["first-name"] + " " + player["last-name"]}
+                </p>
+                <img
+                  src={`http://localhost:3001/${player.image.src}`}
+                  alt="random text"
+                />
+              </Col>
             ))}
-          </ul>
+          </Row>
         )}
-      </section>
-
-      <Container>
-        <Row>
-          <Col xs={4}>1 of 3</Col>
-          <Col xs={4}>2 of 3 (wider)</Col>
-          <Col xs={4}>3 of 3</Col>
-        </Row>
-        <Row>
-          <Col md={12}>1 of 3</Col>
-          <Col md={12} xs={10}>
-            2 of 3 (wider)
-          </Col>
-          <Col md={12}>3 of 3</Col>
-        </Row>
       </Container>
     </>
   );

@@ -7,6 +7,7 @@ import Stadiums from "./pages/Stadiums";
 import Squad from "./pages/Squad";
 import RootLayout from "./pages/Root";
 import HomePage from "./pages/Home";
+import PlayerDetails from "./pages/PlayerDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/squad", element: <Squad /> },
+      { path: "/playerdetails", element: <PlayerDetails /> },
       { path: "/euro2024", element: <Euro2024 /> },
       { path: "/worldcup2026", element: <WorldCup2026 /> },
       { path: "/stadiums", element: <Stadiums /> },
