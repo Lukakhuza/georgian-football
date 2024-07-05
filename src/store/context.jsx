@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const SquadContext = createContext({
+export const SquadContext = createContext({
   players: [],
 });
