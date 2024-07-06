@@ -8,7 +8,7 @@ import Squad from "./pages/Squad";
 import RootLayout from "./pages/Root";
 import HomePage from "./pages/Home";
 import PlayerDetails from "./pages/PlayerDetails";
-import { SquadContext } from "./store/context";
+// import { SquadContext } from "./store/context";
 // import SquadContext from "./store/context.js";
 
 const router = createBrowserRouter([
@@ -27,11 +27,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <SquadContext.Provider>
-      <RouterProvider router={router} />
-    </SquadContext.Provider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

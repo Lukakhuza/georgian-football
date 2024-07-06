@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { SquadContext } from "../store/context";
+import PlayerDetails from "./PlayerDetails";
 
 export default function Squad() {
   // const [isFetching, setIsFetching] = useState(false);
@@ -32,39 +34,42 @@ export default function Squad() {
 
   return (
     <>
-      <Container>
-        {squad.length === 0 && squad.length}
-        {squad.length > 0 && (
-          <Row className="justify-content-evenly">
-            {squad.map((player) => (
-              <Col
-                style={{
-                  border: "solid",
-                  borderColor: "white",
-                  borderRadius: "1rem",
-                  backgroundColor: "rgb(200,84,84)",
-                }}
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3}
-                key={player.id}
-              >
-                <p
-                  className="playwrite-gb-s-400"
-                  style={{ justifyItems: "center" }}
+      <SquadContext.Provider value={{ players: squad }}>
+        <Container>
+          {squad.length === 0 && squad.length}
+          {squad.length > 0 && (
+            <Row className="justify-content-evenly">
+              {squad.map((player) => (
+                <Col
+                  style={{
+                    border: "solid",
+                    borderColor: "white",
+                    borderRadius: "1rem",
+                    backgroundColor: "rgb(200,84,84)",
+                  }}
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={3}
+                  key={player.id}
                 >
-                  {player["first-name"] + " " + player["last-name"]}
-                </p>
-                <img
-                  src={`http://localhost:3001/${player.image.src}`}
-                  alt="random text"
-                />
-              </Col>
-            ))}
-          </Row>
-        )}
-      </Container>
+                  <p
+                    className="playwrite-gb-s-400"
+                    style={{ justifyItems: "center" }}
+                  >
+                    {player["first-name"] + " " + player["last-name"]}
+                  </p>
+                  <img
+                    src={`http://localhost:3001/${player.image.src}`}
+                    alt="random text"
+                  />
+                </Col>
+              ))}
+            </Row>
+          )}
+        </Container>
+        <PlayerDetails />
+      </SquadContext.Provider>
     </>
   );
 }
