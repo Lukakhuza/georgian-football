@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { SquadContext } from "../store/context";
+import { Link } from "react-router-dom";
 import PlayerDetails from "./PlayerDetails";
 
 export default function Squad() {
   // const [isFetching, setIsFetching] = useState(false);
   const [squad, setSquad] = useState([]);
   const [error, setError] = useState();
+  const [selectedPlayer, setSelectedPlayer] = useState({});
+
+  function handleClick(player) {
+    setSelectedPlayer(player);
+  }
 
   useEffect(() => {
     async function fetchPlayers() {
@@ -32,6 +38,8 @@ export default function Squad() {
     );
   }
 
+  // console.log(squad);
+
   return (
     <>
       <SquadContext.Provider value={{ players: squad }}>
@@ -41,6 +49,8 @@ export default function Squad() {
             <Row className="justify-content-evenly">
               {squad.map((player) => (
                 <Col
+                  onClick={() => handleClick(player)}
+                  // <Button onClick={() => handleClick(player)}>
                   style={{
                     border: "solid",
                     borderColor: "white",
@@ -53,16 +63,19 @@ export default function Squad() {
                   lg={3}
                   key={player.id}
                 >
-                  <p
-                    className="playwrite-gb-s-400"
-                    style={{ justifyItems: "center" }}
-                  >
-                    {player["first-name"] + " " + player["last-name"]}
-                  </p>
-                  <img
-                    src={`http://localhost:3001/${player.image.src}`}
-                    alt="random text"
-                  />
+                  <Link to={player.id}>
+                    <p
+                      className="playwrite-gb-s-400"
+                      style={{ justifyItems: "center" }}
+                    >
+                      {player["first-name"] + " " + player["last-name"]}
+                    </p>
+                    <img
+                      src={`http://localhost:3001/${player.image.src}`}
+                      alt="random text"
+                    />
+                  </Link>
+                  {/* </Button> */}
                 </Col>
               ))}
             </Row>

@@ -1,6 +1,6 @@
 export default function Error(isFetching) {
   return (
-    <div>
+    <section>
       <p
         className="nda-message"
         style={{
@@ -12,6 +12,6 @@ export default function Error(isFetching) {
       >
         No Data Available!
       </p>
-    </div>
+    </section>
   );
 }
