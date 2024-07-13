@@ -18,6 +18,7 @@ export default function PlayerDetails() {
         const resData = await response.json();
         console.log(resData.squad);
         setPlayers(resData.squad);
+        console.log(params.playerdetails);
         // console.log(resData.squad[params.playerdetails]["first-name"]);
         // console.log(resData.squad.ok);
         // setCurrentPlayer(resData.squad[params.playerdetails]);
@@ -49,15 +50,29 @@ export default function PlayerDetails() {
             backgroundColor: "rgb(200,0,0)",
           }}
         >
-          {players.map((player) => (
-            <>
-              <img
-                src={`http://localhost:3001/${player.image.src}`}
-                alt="picture alt text"
-              />
-              <div key={player.id}>{player["last-name"]}</div>
-            </>
-          ))}
+          {players
+            .filter((player) => {
+              return player.id === params.playerdetails;
+            })
+            .map((player) => (
+              <>
+                <img
+                  src={`http://localhost:3001/${player.image.src}`}
+                  alt="picture alt text"
+                />
+                <div key={player.id}>{player["last-name"]}</div>
+                <p>{player.number}</p>
+                <p>
+                  {player["first-name"]} {player["last-name"]}{" "}
+                </p>
+                <p>{player.team}</p>
+                <p>Goals in the national team: {player.goals}</p>
+              </>
+            ))}
+
+          {/* {players.filter((player) => {
+            return (player.id = 5);
+          })} */}
         </section>
       )}
       {/* {sqdContext.players.length === 0 && <p>Hello</p>} */}
@@ -79,12 +94,7 @@ export default function PlayerDetails() {
               src={`http://localhost:3001/georges-mikautadze.png`}
               alt="picture alt text"
             />
-            <p>{currentPlayer.number}</p>
-            <p>
-              {currentPlayer["first-name"]} {currentPlayer["last-name"]}{" "}
-            </p>
-            <p>{currentPlayer.team}</p>
-            <p>Goals in the national team: {currentPlayer.goals}</p>
+
           </section> */}
       {/* </> */}
       {/* // )} */}
