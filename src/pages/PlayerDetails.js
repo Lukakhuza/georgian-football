@@ -5,8 +5,9 @@ import { SquadContext } from "../store/context";
 
 export default function PlayerDetails() {
   const [isFetching, setIsFetching] = useState(false);
-  const [currentPlayer, setCurrentPlayer] = useState("hello");
+  const [players, setPlayers] = useState([]);
   const [isError, setIsError] = useState(false);
+  const [selectedPlayer, setSelectedPlayer] = useState();
 
   const params = useParams();
 
@@ -15,11 +16,15 @@ export default function PlayerDetails() {
       try {
         const response = await fetch("http://localhost:3001/football/squad");
         const resData = await response.json();
-        if (!resData.ok) {
+        console.log(resData.squad);
+        setPlayers(resData.squad);
+        // console.log(resData.squad[params.playerdetails]["first-name"]);
+        // console.log(resData.squad.ok);
+        // setCurrentPlayer(resData.squad[params.playerdetails]);
+        // console.log(resData.squad.length);
+        if (!resData.squad.ok) {
           throw new Error("There was an error fetching the player name");
         }
-        // setCurrentPlayer(resData.squad[params.playerdetails]);
-        console.log(currentPlayer);
       } catch (error) {}
     }
 
@@ -28,15 +33,61 @@ export default function PlayerDetails() {
 
   // const sqdContext = useContext(SquadContext);
 
+  // console.log();
   // console.log(squad);
   // console.log(params);
+
   return (
     <>
+      {players.length === 0 && <p>Players Loading</p>}
+      {players.length > 0 && (
+        <section
+          style={{
+            textAlign: "center",
+            fontFamily: "cursive",
+            fontSize: "large",
+            backgroundColor: "rgb(200,0,0)",
+          }}
+        >
+          {players.map((player) => (
+            <>
+              <img
+                src={`http://localhost:3001/${player.image.src}`}
+                alt="picture alt text"
+              />
+              <div key={player.id}>{player["last-name"]}</div>
+            </>
+          ))}
+        </section>
+      )}
       {/* {sqdContext.players.length === 0 && <p>Hello</p>} */}
-      {!params && <p>waiting for params</p>}
-      {params && params.playerdetails}
-      {currentPlayer && <p>No Current Player</p>}
-      {currentPlayer && <p>{currentPlayer.team}</p>}
+      {/* {resData.squad.length === 0 && <p>No Current Player</p>} */}
+      {/* {!currentPlayer.image && <p>No Current Player</p>}
+      {!currentPlayer.image.src && <p>No Current Player</p>} */}
+      {/* {!currentPlayer.image.src && <p>No Current Player</p>} */}
+      {/* {currentPlayer && (
+        <>
+          <section
+            style={{
+              textAlign: "center",
+              fontFamily: "cursive",
+              fontSize: "large",
+              backgroundColor: "rgb(200,0,0)",
+            }}
+          >
+            <img
+              src={`http://localhost:3001/georges-mikautadze.png`}
+              alt="picture alt text"
+            />
+            <p>{currentPlayer.number}</p>
+            <p>
+              {currentPlayer["first-name"]} {currentPlayer["last-name"]}{" "}
+            </p>
+            <p>{currentPlayer.team}</p>
+            <p>Goals in the national team: {currentPlayer.goals}</p>
+          </section> */}
+      {/* </> */}
+      {/* // )} */}
       {/* {sqdContext.players.length > 0 && (
         <div>
           {sqdContext.players.map((player) => (
@@ -44,7 +95,7 @@ export default function PlayerDetails() {
           ))}
         </div>
       )} */}
-      {}
+      {/* // {} */}
       {/* <div>{squad.selectedPlayer}</div> */}
     </>
   );
