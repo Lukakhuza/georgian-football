@@ -3,6 +3,55 @@ const fs = require("fs");
 // const path = require("path");
 const bodyParser = require("body-parser");
 
+const mysql = require("mysql2");
+
+// async function pullData() {
+//   const connection = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "root",
+//     database: "geofootball",
+//   });
+
+//   const fileContent = fs.readFileSync("./data/squad.json");
+//   const squadData = JSON.parse(fileContent);
+//   var data = [];
+//   for (var i = 0; i < squadData.length; i++) {
+//     data.push([
+//       squadData[i].number,
+//       squadData[i]["first-name"],
+//       squadData[i]["last-name"],
+//       squadData[i].pos,
+//       squadData[i].dob,
+//       squadData[i].team,
+//       squadData[i].image.src,
+//       squadData[i].goals,
+//     ]);
+//   }
+//   console.log(data);
+//   var q =
+//     "INSERT INTO Players (PlayerNumber, FirstName, LastName, Position, DateOfBirth, Team, Image, Goals) VALUES ?";
+//   // console.log(stadiumData[0].name);
+//   connection.query(q, [data], function (error, results, fields) {
+//     if (error) {
+//       throw error;
+//     }
+//     console.log(results);
+//   });
+// }
+
+// pullData();
+// res.status(200).json({ stadiums: stadiumData });
+
+// const q = "SELECT * as COUNT_RESULTS FROM geofootball.Stadiums";
+// connection.query(q, function (error, results, fields) {
+//   if (error) {
+//     throw error;
+//   }
+//   console.log(results);
+// });
+// connection.end();
+
 const app = express();
 
 // const adminRoutes = require("./routes/admin");
@@ -42,4 +91,5 @@ app.get("/football/squad", async (req, res) => {
 // app.use((req, res, next) => {
 //   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 // });
+
 app.listen(3001);

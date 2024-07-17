@@ -58,7 +58,7 @@ export default function PlayerDetails() {
               <>
                 <img
                   src={`http://localhost:3001/${player.image.src}`}
-                  alt="picture alt text"
+                  alt={`picture of ${player["last-name"]}`}
                 />
                 <div key={player.id}>{player["last-name"]}</div>
                 <p>{player.number}</p>

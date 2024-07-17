@@ -187,8 +187,8 @@
     "first-name": "Nika",
     "last-name": "Kvekveskiri",
     "pos": "m",
-    "dob": "",
-    "team": "",
+    "dob": "05291992",
+    "team": "Lech Poznań",
     "image": {
       "src": "nika-kvekveskiri.png",
       "alt": ""
@@ -201,8 +201,8 @@
     "first-name": "Otar",
     "last-name": "Kiteishvili",
     "pos": "m",
-    "dob": "SK Sturm Graz",
-    "team": "03261996",
+    "dob": "03261996",
+    "team": "SK Sturm Graz",
     "image": {
       "src": "otar-kiteishvili.png",
       "alt": ""
