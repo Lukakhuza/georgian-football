@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/squad", element: <Squad /> },
       { path: "/squad/:playerdetails", element: <PlayerDetails /> },
-      { path: "/euro2024", element: <Euro2024 /> },
+      // { path: "/euro2024", element: <Euro2024 /> },
       { path: "/worldcup2026", element: <WorldCup2026 /> },
       { path: "/stadiums", element: <Stadiums /> },
     ],

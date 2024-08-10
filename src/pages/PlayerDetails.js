@@ -14,16 +14,18 @@ export default function PlayerDetails() {
   useEffect(() => {
     async function fetchCurrentPlayer() {
       try {
-        const response = await fetch("http://localhost:3001/football/squad");
+        const response = await fetch(
+          "https://oedkxeq7oj.execute-api.us-east-1.amazonaws.com/dev/players"
+        );
         const resData = await response.json();
-        console.log(resData.squad);
-        setPlayers(resData.squad);
+        // console.log(resData.squad);
+        setPlayers(resData);
         console.log(params.playerdetails);
         // console.log(resData.squad[params.playerdetails]["first-name"]);
         // console.log(resData.squad.ok);
         // setCurrentPlayer(resData.squad[params.playerdetails]);
         // console.log(resData.squad.length);
-        if (!resData.squad.ok) {
+        if (!resData.ok) {
           throw new Error("There was an error fetching the player name");
         }
       } catch (error) {}
@@ -47,7 +49,7 @@ export default function PlayerDetails() {
             textAlign: "center",
             fontFamily: "cursive",
             fontSize: "large",
-            backgroundColor: "rgb(200,0,0)",
+            backgroundColor: "rgb(200,84,84)",
           }}
         >
           {players
@@ -55,10 +57,10 @@ export default function PlayerDetails() {
               return player.id === params.playerdetails;
             })
             .map((player) => (
-              <>
+              <div key={player.id}>
                 <img
-                  src={`http://localhost:3001/${player.image.src}`}
-                  alt={`picture of ${player["last-name"]}`}
+                  src={`https://lukakhuzastorage.s3.amazonaws.com/players/${player.image.src}`}
+                  alt={`picture of ${player.id}`}
                 />
                 <div key={player.id}>{player["last-name"]}</div>
                 <p>{player.number}</p>
@@ -67,7 +69,7 @@ export default function PlayerDetails() {
                 </p>
                 <p>{player.team}</p>
                 <p>Goals in the national team: {player.goals}</p>
-              </>
+              </div>
             ))}
 
           {/* {players.filter((player) => {
@@ -75,38 +77,6 @@ export default function PlayerDetails() {
           })} */}
         </section>
       )}
-      {/* {sqdContext.players.length === 0 && <p>Hello</p>} */}
-      {/* {resData.squad.length === 0 && <p>No Current Player</p>} */}
-      {/* {!currentPlayer.image && <p>No Current Player</p>}
-      {!currentPlayer.image.src && <p>No Current Player</p>} */}
-      {/* {!currentPlayer.image.src && <p>No Current Player</p>} */}
-      {/* {currentPlayer && (
-        <>
-          <section
-            style={{
-              textAlign: "center",
-              fontFamily: "cursive",
-              fontSize: "large",
-              backgroundColor: "rgb(200,0,0)",
-            }}
-          >
-            <img
-              src={`http://localhost:3001/georges-mikautadze.png`}
-              alt="picture alt text"
-            />
-
-          </section> */}
-      {/* </> */}
-      {/* // )} */}
-      {/* {sqdContext.players.length > 0 && (
-        <div>
-          {sqdContext.players.map((player) => (
-            <div key={player.name}>{selectedPlayer.selectedPlayer}</div>
-          ))}
-        </div>
-      )} */}
-      {/* // {} */}
-      {/* <div>{squad.selectedPlayer}</div> */}
     </>
   );
 }

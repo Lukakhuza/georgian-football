@@ -8,7 +8,7 @@ export default function StadiumDetails({ props }) {
       {!props && <p>Fetching Data</p>}
       {props && (
         <>
-          <p>
+          <p style={{ textAlign: "center" }}>
             <span>{props.name}</span>
           </p>
           <p>Capacity: {props.capacity}</p>
@@ -18,7 +18,7 @@ export default function StadiumDetails({ props }) {
             style={{
               width: 500,
             }}
-            src={`http://localhost:3001/${props.image.src}`}
+            src={`${props.image.src}`}
             alt={props.image.alt}
           />
           <form method="dialog">

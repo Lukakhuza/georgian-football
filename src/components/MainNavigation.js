@@ -31,13 +31,13 @@ function MainNavigation() {
             Squad
           </NavigationTab>
 
-          <NavigationTab
+          {/* <NavigationTab
             to="euro2024"
             onSelectTab={() => handleSelect("euro2024")}
             selectedTab={selectedTab === "euro2024"}
           >
             Euro 2024
-          </NavigationTab>
+          </NavigationTab> */}
 
           <NavigationTab
             to="stadiums"

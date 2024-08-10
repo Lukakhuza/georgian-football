@@ -108,7 +108,7 @@ code {
   border: none;
   border-radius: 8px;
   padding: 2rem;
-  background-color: darkred;
+  background-color: rgb(120, 26, 26);
   color: white;
 }
 
@@ -147,6 +147,14 @@ code {
   text-align: right;
 }
 
+#stadiumstyle {
+  opacity: 0.75;
+}
+
+#stadiumstyle:hover {
+  opacity: 1;
+}
+
 .result-modal button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -159,7 +167,7 @@ code {
 }
 
 .result-modal button:hover {
-  background: rgb(88, 16, 16);
+  background: rgb(200, 84, 84);
 }
 
 .playwrite-gb-s-400 {

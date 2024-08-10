@@ -21,12 +21,19 @@ export default function Stadiums() {
       setIsFetching(true);
 
       try {
-        const response = await fetch("http://localhost:3001/football/stadiums");
+        const response = await fetch(
+          "https://oedkxeq7oj.execute-api.us-east-1.amazonaws.com/dev/stadiums",
+          {
+            method: "GET",
+            headers: {},
+          }
+        );
         const resData = await response.json();
         if (!response.ok) {
           throw new Error("Failed to fetch the list of stadiums.");
         }
-        setStadiums(resData.stadiums);
+        console.log(resData);
+        setStadiums(resData);
       } catch (error) {
         setError(error);
       }
@@ -50,13 +57,14 @@ export default function Stadiums() {
           <ul className="stadiums">
             {stadiums.map((stadium) => (
               <li key={stadium.id} className="stadium-item">
-                <button onClick={() => handleClick(stadium.id)}>
+                <div onClick={() => handleClick(stadium.id)}>
                   <img
-                    src={`http://localhost:3001/${stadium.image.src}`}
+                    id="stadiumstyle"
+                    src={`${stadium.image.src}`}
                     alt={stadium.image.alt}
                   />
                   <h4>{stadium.name}</h4>
-                </button>
+                </div>
               </li>
             ))}
           </ul>

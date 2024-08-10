@@ -18,9 +18,11 @@ export default function Squad() {
     async function fetchPlayers() {
       // setIsFetching(true);
       try {
-        const response = await fetch("http://localhost:3001/football/squad");
+        const response = await fetch(
+          "https://oedkxeq7oj.execute-api.us-east-1.amazonaws.com/dev/players"
+        );
         const resData = await response.json();
-        setSquad(resData.squad);
+        setSquad(resData);
       } catch (error) {
         setError(error);
       }
@@ -71,7 +73,7 @@ export default function Squad() {
                       {player["first-name"] + " " + player["last-name"]}
                     </p>
                     <img
-                      src={`http://localhost:3001/${player.image.src}`}
+                      src={`https://lukakhuzastorage.s3.amazonaws.com/players/${player.image.src}`}
                       alt="random text"
                     />
                   </Link>

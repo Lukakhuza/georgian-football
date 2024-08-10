@@ -5,40 +5,40 @@ const bodyParser = require("body-parser");
 
 const mysql = require("mysql2");
 
-// async function pullData() {
-//   const connection = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "root",
-//     database: "geofootball",
-//   });
+async function pullData() {
+  const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "geofootball",
+  });
 
-//   const fileContent = fs.readFileSync("./data/squad.json");
-//   const squadData = JSON.parse(fileContent);
-//   var data = [];
-//   for (var i = 0; i < squadData.length; i++) {
-//     data.push([
-//       squadData[i].number,
-//       squadData[i]["first-name"],
-//       squadData[i]["last-name"],
-//       squadData[i].pos,
-//       squadData[i].dob,
-//       squadData[i].team,
-//       squadData[i].image.src,
-//       squadData[i].goals,
-//     ]);
-//   }
-//   console.log(data);
-//   var q =
-//     "INSERT INTO Players (PlayerNumber, FirstName, LastName, Position, DateOfBirth, Team, Image, Goals) VALUES ?";
-//   // console.log(stadiumData[0].name);
-//   connection.query(q, [data], function (error, results, fields) {
-//     if (error) {
-//       throw error;
-//     }
-//     console.log(results);
-//   });
-// }
+  const fileContent = fs.readFileSync("./data/squad.json");
+  const squadData = JSON.parse(fileContent);
+  var data = [];
+  for (var i = 0; i < squadData.length; i++) {
+    data.push([
+      squadData[i].number,
+      squadData[i]["first-name"],
+      squadData[i]["last-name"],
+      squadData[i].pos,
+      squadData[i].dob,
+      squadData[i].team,
+      squadData[i].image.src,
+      squadData[i].goals,
+    ]);
+  }
+  console.log(data);
+  var q =
+    "INSERT INTO Players (PlayerNumber, FirstName, LastName, Position, DateOfBirth, Team, Image, Goals) VALUES ?";
+  // console.log(stadiumData[0].name);
+  connection.query(q, [data], function (error, results, fields) {
+    if (error) {
+      throw error;
+    }
+    console.log(results);
+  });
+}
 
 // pullData();
 // res.status(200).json({ stadiums: stadiumData });
@@ -53,6 +53,9 @@ const mysql = require("mysql2");
 // connection.end();
 
 const app = express();
+
+app.set("view engine", "pug");
+app.set("views", "views");
 
 // const adminRoutes = require("./routes/admin");
 // const shopRoutes = require("./routes/shop");
@@ -80,6 +83,10 @@ app.get("/football/squad", async (req, res) => {
   const fileContent = await fs.readFileSync("./data/squad.json");
   const squadData = JSON.parse(fileContent);
   res.status(200).json({ squad: squadData });
+});
+
+app.get("/", async (req, res) => {
+  res.render("shop");
 });
 
 // app.use(express.static(path.join(__dirname, "public")));
