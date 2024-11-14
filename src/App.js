@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       { path: "/squad/:playerdetails", element: <PlayerDetails /> },
       // { path: "/euro2024", element: <Euro2024 /> },
       { path: "/worldcup2026", element: <WorldCup2026 /> },
-      { path: "/stadiums", element: <Stadiums /> },
+      { path: "/stadiums", element: <Stadiums title="Stadiums in Georgia" /> },
     ],
   },
 ]);

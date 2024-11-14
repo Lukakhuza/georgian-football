@@ -19,7 +19,7 @@ export default function Squad() {
       // setIsFetching(true);
       try {
         const response = await fetch(
-          "https://oedkxeq7oj.execute-api.us-east-1.amazonaws.com/dev/players"
+          "https://geofootball.s3.us-east-1.amazonaws.com/data/squad.json"
         );
         const resData = await response.json();
         setSquad(resData);
@@ -73,7 +73,7 @@ export default function Squad() {
                       {player["first-name"] + " " + player["last-name"]}
                     </p>
                     <img
-                      src={`https://lukakhuzastorage.s3.amazonaws.com/players/${player.image.src}`}
+                      src={`https://geofootball.s3.amazonaws.com/players/${player.image.src}`}
                       alt="random text"
                     />
                   </Link>

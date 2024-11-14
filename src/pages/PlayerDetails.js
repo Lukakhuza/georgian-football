@@ -15,7 +15,7 @@ export default function PlayerDetails() {
     async function fetchCurrentPlayer() {
       try {
         const response = await fetch(
-          "https://oedkxeq7oj.execute-api.us-east-1.amazonaws.com/dev/players"
+          "https://geofootball.s3.us-east-1.amazonaws.com/data/squad.json"
         );
         const resData = await response.json();
         // console.log(resData.squad);
@@ -40,6 +40,8 @@ export default function PlayerDetails() {
   // console.log(squad);
   // console.log(params);
 
+  console.log(players[0]);
+
   return (
     <>
       {players.length === 0 && <p>Players Loading</p>}
@@ -59,7 +61,7 @@ export default function PlayerDetails() {
             .map((player) => (
               <div key={player.id}>
                 <img
-                  src={`https://lukakhuzastorage.s3.amazonaws.com/players/${player.image.src}`}
+                  src={`https://geofootball.s3.us-east-1.amazonaws.com/players/${player.image.src}`}
                   alt={`picture of ${player.id}`}
                 />
                 <div key={player.id}>{player["last-name"]}</div>
