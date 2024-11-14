@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import classes from "./Stadiums.module.css";
 
 function getStadiumData() {
   return fetch(
@@ -24,22 +25,24 @@ export default function Stadiums({
   }, []);
 
   return (
-    <section className="stadiums-category">
-      <h2>{title}</h2>
-      <ul className="stadiums">
-        {stadiums.map((stadium) => (
-          //
-          <li key={stadium.id} className="stadium-item">
-            <button onClick={() => onSelectStadium()}>
-              <img
-                src={`https://geofootball.s3.us-east-1.amazonaws.com/stadiums/${stadium.image.src}`}
-                alt={`A picture of ${stadium.name}`}
-              />
-              <h3>{stadium.name}</h3>
-            </button>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div className={classes["container"]}>
+      <main className={classes["stadiums-category"]}>
+        <h2>{title}</h2>
+        <ul className={classes["stadiums"]}>
+          {stadiums.map((stadium) => (
+            //
+            <li key={stadium.id} className={classes["stadium-item"]}>
+              <button onClick={() => onSelectStadium()}>
+                <img
+                  src={`https://geofootball.s3.us-east-1.amazonaws.com/stadiums/${stadium.image.src}`}
+                  alt={`${stadium.name}`}
+                />
+                <h3>{stadium.name}</h3>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </div>
   );
 }
