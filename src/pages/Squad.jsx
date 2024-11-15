@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { SquadContext } from "../store/context";
 import { Link } from "react-router-dom";
 import PlayerDetails from "./PlayerDetails";
+import classes from "./Squad.module.css";
 
 export default function Squad() {
   // const [isFetching, setIsFetching] = useState(false);
@@ -40,44 +41,37 @@ export default function Squad() {
     );
   }
 
-  // console.log(squad);
-
   return (
     <>
       <SquadContext.Provider value={{ players: squad }}>
         <Container>
           {squad.length === 0 && squad.length}
           {squad.length > 0 && (
-            <Row className="justify-content-evenly">
+            <Row className={classes["whole-squad"]}>
               {squad.map((player) => (
                 <Col
                   onClick={() => handleClick(player)}
                   // <Button onClick={() => handleClick(player)}>
-                  style={{
-                    border: "solid",
-                    borderColor: "white",
-                    borderRadius: "1rem",
-                    backgroundColor: "rgb(200,84,84)",
-                  }}
                   xs={12}
                   sm={6}
                   md={4}
                   lg={3}
                   key={player.id}
+                  className={classes["player"]}
                 >
                   <Link to={player.id}>
                     <p
-                      className="playwrite-gb-s-400"
+                      // className="playwrite-gb-s-400"
                       style={{ justifyItems: "center" }}
-                    >
-                      {player["first-name"] + " " + player["last-name"]}
-                    </p>
+                    ></p>
                     <img
                       src={`https://geofootball.s3.amazonaws.com/players/${player.image.src}`}
                       alt="random text"
                     />
+                    <p id={classes.playername}>
+                      {player["first-name"] + " " + player["last-name"]}
+                    </p>
                   </Link>
-                  {/* </Button> */}
                 </Col>
               ))}
             </Row>

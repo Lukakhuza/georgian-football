@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  background: #1f1c2c;
+  /* background: #1f1c2c; */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   animation: slide-up-fade-in 0.3s ease-out forwards;
   /* width: 400px; */

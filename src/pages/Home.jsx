@@ -1,10 +1,9 @@
-// import { logo } from "../Nakrebi.logo.png";
-// import logo from "../Nakrebi.logo.png";
+import classes from "./Home.module.css";
 
 export default function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header id={classes["container"]}>
         <img
           src="https://geofootball.s3.amazonaws.com/logos/Nakrebi.logo.png"
           className="App-logo"

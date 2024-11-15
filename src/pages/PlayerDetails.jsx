@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import { SquadContext } from "../store/context";
+import classes from "./PlayerDetails.module.css";
 
 export default function PlayerDetails() {
   const [isFetching, setIsFetching] = useState(false);
@@ -59,7 +60,7 @@ export default function PlayerDetails() {
               return player.id === params.playerdetails;
             })
             .map((player) => (
-              <div key={player.id}>
+              <div key={player.id} className={classes["player-details"]}>
                 <img
                   src={`https://geofootball.s3.us-east-1.amazonaws.com/players/${player.image.src}`}
                   alt={`picture of ${player.id}`}
