@@ -8,6 +8,7 @@ import Squad from "./pages/Squad";
 import RootLayout from "./pages/Root";
 import HomePage from "./pages/Home";
 import PlayerDetails from "./pages/PlayerDetails";
+import ContactUs from "./pages/ContactUs";
 // import { SquadContext } from "./store/context";
 // import SquadContext from "./store/context.js";
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       // { path: "/euro2024", element: <Euro2024 /> },
       { path: "/worldcup2026", element: <WorldCup2026 /> },
       { path: "/stadiums", element: <Stadiums title="Stadiums in Georgia" /> },
+      { path: "/contactUs", element: <ContactUs title="Contact Us" /> },
     ],
   },
 ]);
