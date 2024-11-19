@@ -46,6 +46,14 @@ function MainNavigation() {
           >
             Stadiums
           </NavigationTab>
+
+          <NavigationTab
+            to="contactUs"
+            onSelectTab={() => handleSelect("contactUs")}
+            selectedTab={selectedTab === "contactUs"}
+          >
+            Contact Us
+          </NavigationTab>
         </ul>
       </nav>
     </header>
